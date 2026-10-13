@@ -6,16 +6,14 @@ public class Runner {
         Calc myCalculator = new Calc();
         //get user input for two numbers
         Scanner scan = new Scanner(System.in);
-        System.out.println("Please enter the first number: ");
-        double n1 = scan.nextDouble();
-        System.out.println("Please enter the second number: ");
-        double n2 = scan.nextDouble();
-
+        double n1= myCalculator.getnumInput("Please enter the first number:\n");
+        double n2= myCalculator.getnumInput("Please enter the second number:\n");
         //pass the numbers to the Calc object
         myCalculator.setNum1(n1);
         myCalculator.setNum2(n2);
 
         //output from Calc instance
+        System.out.println("Displaying private data fields using toString():");
         System.out.println(myCalculator);
 
         //examining the instance private data fields by calling get methods
